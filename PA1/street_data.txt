@@ -1,0 +1,14 @@
+Street: Sinto
+Block 1:
+  Approaching Street: Cincinnati
+  Leaving Street: Hamilton
+  Trees:
+
+Block 2:
+  Approaching Street: Dakota
+  Leaving Street: Cincinnati
+  Trees:
+    Tree Type: Oak, Shadow Distance: 3
+
+----------------------------------------
+
