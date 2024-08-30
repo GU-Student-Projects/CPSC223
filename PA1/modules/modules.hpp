@@ -5,6 +5,7 @@
 #include "./utils/linked_list.hpp"
 #include "./utils/utilities.hpp"
 #include <fstream>
+#include <unordered_map>
 
 // Input data mode for tree shadow mapping
 std::vector<StreetLinkedList> inputMode();
@@ -20,3 +21,9 @@ void importVectorOfLinkedLists(std::vector<StreetLinkedList>& streetLists, const
 
 // Simple menu for deciding actions
 int mainMenu();
+
+// Explore all linked lists and their nodes
+void explorationMode(std::vector<StreetLinkedList>& streetData);
+
+// Explore specific linked list
+void streetExploration(StreetLinkedList& list, std::vector<StreetLinkedList>& streetData);

@@ -10,17 +10,18 @@ Description: This cpp runs the program
 
 int main() {
     int choice;
+    std::string fileName;
     std::vector<StreetLinkedList> streetData;
     choice = mainMenu();
 
     if (2 == choice){        
         clearScreen();
         warGamesText("ENTERING DATA EXPLORATION MODE.",50);
-        importVectorOfLinkedLists(streetData, "output.dat");
-
-        for (const auto& street : streetData) {
-        street.printList();
-        }
+        
+        std::cout << "\nINPUT FILE: ";
+        std::cin >> fileName;
+        importVectorOfLinkedLists(streetData, fileName);
+        explorationMode(streetData);
 
 		return 0;
         }

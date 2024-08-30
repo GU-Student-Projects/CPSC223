@@ -67,5 +67,5 @@ void importVectorOfLinkedLists(std::vector<StreetLinkedList>& streetLists, const
     }
 
     inFile.close();
-    warGamesText("IMPORTED VECTOR OF LINKED LISTS FROM:" + filename, 50);
+    warGamesText("IMPORTED VECTOR OF LINKED LISTS FROM: " + filename, 50);
 }
