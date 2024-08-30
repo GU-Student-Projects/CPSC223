@@ -8,10 +8,11 @@
 
 // Data structure to store information about each tree
 struct Data {
-    int shadowDistance;
+    int eastDistance;
+    int westDistance;
     std::string treeType;
 
-    Data(int sd, const std::string& tt) : shadowDistance(sd), treeType(tt) {}
+    Data(int ed, int wd, const std::string& tt) : eastDistance(ed), westDistance(wd), treeType(tt) {}
 };
 
 // Node structure for the linked list

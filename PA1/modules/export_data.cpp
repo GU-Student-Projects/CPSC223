@@ -41,7 +41,8 @@ void exportVectorOfLinkedLists(const std::vector<StreetLinkedList>& streetLists,
             outFile.write(reinterpret_cast<const char*>(&treesPerBlockSize), sizeof(treesPerBlockSize));
 
             for (const auto& data : curr->treesPerBlock) {
-                outFile.write(reinterpret_cast<const char*>(&data.shadowDistance), sizeof(data.shadowDistance));
+                outFile.write(reinterpret_cast<const char*>(&data.westDistance), sizeof(data.westDistance));
+                outFile.write(reinterpret_cast<const char*>(&data.eastDistance), sizeof(data.eastDistance));
 
                 size_t treeTypeLength = data.treeType.size();
                 outFile.write(reinterpret_cast<const char*>(&treeTypeLength), sizeof(treeTypeLength));
@@ -54,7 +55,7 @@ void exportVectorOfLinkedLists(const std::vector<StreetLinkedList>& streetLists,
     }
 
     outFile.close();
-    warGamesText("EXPORTED VECTOR OF LINKED LISTS TO:" + filename, 50);
+    warGamesText("EXPORTED VECTOR OF LINKED LISTS TO: " + filename, 50);
 }
 
      /*************************************************************
@@ -87,7 +88,7 @@ void exportToTextFile(const std::vector<StreetLinkedList>& lists, const std::str
                 outFile << "  Trees:\n";
 
                 for (const auto& tree : current->treesPerBlock) {
-                    outFile << "    Tree Type: " << tree.treeType << ", Shadow Distance: " << tree.shadowDistance << "\n";
+                    outFile << "    Tree Type: " << tree.treeType << ", East Distance: " << tree.eastDistance << ", West Distance: " << tree.westDistance << "\n";
                 }
 
                 outFile << "\n";

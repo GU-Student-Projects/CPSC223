@@ -35,7 +35,10 @@ int main() {
     }
 
     // exportToTextFile(streetData, "street_data.txt");
-    exportVectorOfLinkedLists(streetData, "output.dat");
+    std::string fileName;
+    std::cout << "\nOUTPUT FILE NAME: ";
+    std::cin >> fileName;
+    exportVectorOfLinkedLists(streetData, "results/"+fileName+".dat");
 
     return 0;
     }

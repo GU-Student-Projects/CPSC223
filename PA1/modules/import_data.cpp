@@ -47,15 +47,16 @@ void importVectorOfLinkedLists(std::vector<StreetLinkedList>& streetLists, const
             Node newNode(treesPerBlockSize, approachingStreet, leavingStreet);
 
             for (size_t k = 0; k < treesPerBlockSize; k++) {
-                int shadowDistance;
-                inFile.read(reinterpret_cast<char*>(&shadowDistance), sizeof(shadowDistance));
+                int westDistance, eastDistance;
+                inFile.read(reinterpret_cast<char*>(&eastDistance), sizeof(eastDistance));
+                inFile.read(reinterpret_cast<char*>(&westDistance), sizeof(westDistance));
 
                 size_t treeTypeLength;
                 inFile.read(reinterpret_cast<char*>(&treeTypeLength), sizeof(treeTypeLength));
                 std::string treeType(treeTypeLength, '\0');
                 inFile.read(&treeType[0], treeTypeLength);
 
-                newNode.treesPerBlock.emplace_back(shadowDistance, treeType);
+                newNode.treesPerBlock.emplace_back(eastDistance, westDistance, treeType);
             }
 
             street.append(newNode);

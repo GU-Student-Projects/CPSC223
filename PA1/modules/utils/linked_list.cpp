@@ -102,7 +102,7 @@ void StreetLinkedList::printList() const {
     while (current != nullptr) {
         std::cout << "There are " << current->treesPerBlock.size() << " trees, on the city block between " << streetName << " and cross streets: " << current->approachingStreet << " and " << current->leavingStreet << ".\n";
         for (const auto& tree : current->treesPerBlock) {
-            std::cout << "  Tree Type: " << tree.treeType << ", Shadow Distance: " << tree.shadowDistance << " meter(s) \n";
+            std::cout << "  Tree Type: " << tree.treeType << ", East Distance: " << tree.eastDistance << " meter(s), West Distance: " << tree.westDistance <<" meter(s)\n";
         }
         current = current->next;
     }

@@ -75,12 +75,13 @@ std::vector<StreetLinkedList> inputMode() {
             Node cityBlock(numberOfTrees, approachingStreet, passingStreet);
 
             for (int i = 0; i < numberOfTrees; i++) {
-                int shadowDistance = getValidInteger("SHADOW DISTANCE FOR TREE " + std::to_string(i + 1) + " OUT OF " + std::to_string(numberOfTrees) + " (Meters): ");
+                int eastDistance = getValidInteger("EAST DISTANCE BETWEEN TREES " + std::to_string(i + 1) + " OUT OF " + std::to_string(numberOfTrees) + " (METERS): ");
+                int westDistance = getValidInteger("WEST DISTANCE BETWEEN TREES " + std::to_string(i + 1) + " OUT OF " + std::to_string(numberOfTrees) + " (METERS): ");
                 std::string treeType;
                 std::cout << "TREE TYPE FOR TREE " + std::to_string(i + 1) + " OUT OF " + std::to_string(numberOfTrees) + ": ";
                 std::cin >> treeType;
 
-                cityBlock.treesPerBlock.emplace_back(shadowDistance, treeType);
+                cityBlock.treesPerBlock.emplace_back(eastDistance, westDistance, treeType);
             }
 
             street.append(cityBlock);
