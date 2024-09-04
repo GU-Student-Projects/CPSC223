@@ -8,6 +8,15 @@ Description: This cpp contains the functions for the input mode of the applicati
 
 #include "modules.hpp"
 
+     /*************************************************************
+    * Function: importVectorOfLinkedLists()
+    * Date Created: 8/28/24
+    * Date Last Modified: 8/28/24
+    * Description: Takes a dat file and imports a vector of linked lists
+    * Input parameters: vector of linked lists, string filename
+    * Returns: none
+    *************************************************************/
+
 void importVectorOfLinkedLists(std::vector<StreetLinkedList>& streetLists, const std::string& filename) {
     std::ifstream inFile(filename, std::ios::binary);
 

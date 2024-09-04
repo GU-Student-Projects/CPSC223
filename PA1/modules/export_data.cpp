@@ -8,6 +8,16 @@ Description: This cpp contains the functions for the input mode of the applicati
 
 #include "modules.hpp"
 
+     /*************************************************************
+    * Function: exportVectorOfLinkedLists()
+    * Date Created: 8/28/24
+    * Date Last Modified: 8/28/24
+    * Description: Takes the vector of linked list and generates
+    * a dat file.
+    * Input parameters: Vector of Linked List, String
+    * Returns: DAT file
+    *************************************************************/
+
 void exportVectorOfLinkedLists(const std::vector<StreetLinkedList>& streetLists, const std::string& filename) {
     std::ofstream outFile(filename, std::ios::binary);
 

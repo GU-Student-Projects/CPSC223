@@ -108,6 +108,16 @@ void StreetLinkedList::printList() const {
     }
 }
 
+
+     /*************************************************************
+    * Function: findSize()
+    * Date Created: 8/28/24
+    * Date Last Modified: 8/28/24
+    * Description: Get the size of a linked list
+    * Input parameters: None
+    * Returns: int
+    *************************************************************/
+
 int StreetLinkedList::findSize() const {
     int size = 0;
     Node* curr = head;
@@ -117,6 +127,15 @@ int StreetLinkedList::findSize() const {
     }
     return size;
 }
+
+     /*************************************************************
+    * Function: insertNode()
+    * Date Created: 8/28/24
+    * Date Last Modified: 8/28/24
+    * Description: Add a node at any position
+    * Input parameters: Node int
+    * Returns: None
+    *************************************************************/
 
 void StreetLinkedList::insertNode(Node& newNode, int position) {
     Node* newNodePtr = new Node(newNode);
@@ -153,6 +172,15 @@ void StreetLinkedList::insertNode(Node& newNode, int position) {
     }
 }
 
+     /*************************************************************
+    * Function: deleteNode()
+    * Date Created: 8/28/24
+    * Date Last Modified: 8/28/24
+    * Description: delete node at any position
+    * Input parameters: approaching street str, leaving streat str
+    * Returns: None
+    *************************************************************/
+
 void StreetLinkedList::deleteNode(const std::string& approachingStreet, const std::string& leavingStreet) {
     Node* current = head;
 
@@ -185,6 +213,15 @@ void StreetLinkedList::deleteNode(const std::string& approachingStreet, const st
     }
     std::cout << "Node not found.\n";
 }
+
+     /*************************************************************
+    * Function: searchNode()
+    * Date Created: 8/28/24
+    * Date Last Modified: 8/28/24
+    * Description: Find any node at any position
+    * Input parameters: approaching street str, leaving street str
+    * Returns: Node ptr
+    *************************************************************/
 
 Node* StreetLinkedList::searchNode(const std::string& approachingStreet, const std::string& leavingStreet) const {
     Node* current = head;
