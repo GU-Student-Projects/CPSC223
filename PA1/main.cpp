@@ -41,6 +41,10 @@ int main() {
     std::cin >> fileName;
     exportVectorOfLinkedLists(streetData, "results/"+fileName+".dat");
 
+    // recursive loop
+    clearScreen();
+    main();
+
     return 0;
     }
 }

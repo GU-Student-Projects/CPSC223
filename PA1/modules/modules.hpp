@@ -7,6 +7,12 @@
 #include <fstream>
 #include <unordered_map>
 
+// Simple struct to store node selection
+struct BlockData {
+    std::string approachingStreet;
+    std::string passingStreet;
+};
+
 // Input data mode for tree shadow mapping
 std::vector<StreetLinkedList> inputMode();
 
@@ -25,5 +31,9 @@ int mainMenu();
 // Explore all linked lists and their nodes
 void explorationMode(std::vector<StreetLinkedList>& streetData);
 
+
+// Select a specific block
+void blockMenu(StreetLinkedList& list, std::vector<StreetLinkedList>& streetData);
+
 // Explore specific linked list
-void streetExploration(StreetLinkedList& list, std::vector<StreetLinkedList>& streetData);
+void streetExploration(StreetLinkedList& list, std::vector<StreetLinkedList>& streetData, Node* current);
