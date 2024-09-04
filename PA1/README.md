@@ -31,11 +31,11 @@ Inside the doubly linked list are the node structs which contain block level dat
 
 #### Input Mode
 
-Outside of data architecture, the input mode was created as a way to interface between the user and the program, allowing them to input tree data directly. It utilizes link list navigation and several menus for quick CLI access to add a tree to a block, add a block, or add a longitudinal street. From there, the data is then exported to the results folder and stored for later use.
+Outside of data architecture, the input mode was created as a way to interface between the user and the program, allowing them to input tree data directly. It utilizes link list navigation and several menus for quick CLI access to add a tree to a block, add a block, or add a longitudinal street. From there, the data is then exported to the results folder and stored for later use. JSON was initially considered as a human readable and easily integrated data file, but was ultimatly vetoed due to its more complicated integration with the application. This is something that will be revisited in future iterations, to allow form multiple file format uploads
 
 #### Exploration Mode
 
-Due to the creation of the input mode first, the exploration mode was found to be easier to impliment. By reversing the export data function, the import data function allows for a user to reload past data. Upon its completion, several menus were constructed to dynamically list all streets and blocks. This utilizes an unordered map (dictionary) to store string or struct data and recall it with a key, input during the menu selection process. Future improvements include a sorting algorithm to sort each linked list, ensuring a continuous flow of city blocks.
+Due to the creation of the input mode first, the exploration mode was found to be easier to impliment. By reversing the export data function, the import data function allows for a user to reload past data. Upon its completion, several menus were constructed to dynamically list all streets and blocks. This utilizes an unordered map (dictionary) to store string or struct data and recall it with a key, input during the menu selection process. Future improvements include a sorting algorithm to sort each linked list, ensuring a continuous and geographic accurate map of city blocks.
 
 ### Summary
 
