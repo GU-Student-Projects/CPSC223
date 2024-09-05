@@ -195,6 +195,8 @@ void StreetLinkedList::deleteNode(const std::string& approachingStreet, const st
                 current->prev->next = current->next;
             }
 
+            std::cout << "hi" << std::endl;
+
             if (current == tail) {
                 tail = current->prev;
                 if (tail != nullptr) {
