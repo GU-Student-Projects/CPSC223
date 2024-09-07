@@ -31,7 +31,6 @@ int mainMenu();
 // Explore all linked lists and their nodes
 void explorationMode(std::vector<StreetLinkedList>& streetData);
 
-
 // Select a specific block
 void blockMenu(StreetLinkedList& list, std::vector<StreetLinkedList>& streetData);
 
