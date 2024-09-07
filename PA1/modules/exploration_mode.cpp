@@ -32,8 +32,8 @@ void explorationMode(std::vector<StreetLinkedList>& streetData) {
 
     menu += std::to_string(streetData.size() + 1) + ". All\n";
     menuMap[std::to_string(streetData.size() + 1)] = "All";
-    menu += std::to_string(streetData.size() + 1) + ". Exit\n";
-    menuMap[std::to_string(streetData.size() + 1)] = "Exit";
+    menu += std::to_string(streetData.size() + 2) + ". Exit\n";
+    menuMap[std::to_string(streetData.size() + 2)] = "Exit";
 
     warGamesText(menu, 1);
 
