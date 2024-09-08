@@ -1,19 +1,26 @@
 # Directories for source files
 SRC_DIRS = . ./modules ./modules/utils
+TEST_DIRS = ./tests ./modules ./modules/utils
 
-# Find all .cpp files in the specified directories
+# Find all .cpp files in the specified directories, but not in the root
 SRCS = $(wildcard $(foreach dir, $(SRC_DIRS), $(dir)/*.cpp))
+TEST_SRCS = $(wildcard $(foreach dir, $(TEST_DIRS), $(dir)/*.cpp))
 
-# Default target
-all: Tree_Shadow
+# Default target: build and run main.cpp from modules
+all: main
 
-# Build and run the executable
-Tree_Shadow: $(SRCS)
+main: $(SRCS)
 	@g++ -g -Wall -std=c++11 $(SRCS) -o outputExecutable
 	@./outputExecutable
 	@rm ./outputExecutable
 
-# Debug target for running gdb and memory analysis
+# Target for building and running tests, including the linked_list.hpp
+test: $(TEST_SRCS)
+	@g++ -g -Wall -std=c++11 -I./modules/utils $(TEST_SRCS) -o testExecutable
+	@./testExecutable
+	@rm ./testExecutable
+
+# Debug target for running gdb and memory analysis on main.cpp
 debug: $(SRCS)
 	@g++ -g -Wall -std=c++11 $(SRCS) -o outputExecutable
 	@echo "Running gdb for debugging..."
@@ -22,5 +29,4 @@ debug: $(SRCS)
 
 # Clean target to remove generated files
 clean:
-	@rm -f outputExecutable
-
+	@rm -f outputExecutable testExecutable
