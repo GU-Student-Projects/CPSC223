@@ -33,3 +33,5 @@
 
 .vscode/
 outputExecutable
+testExecutable
+test_export.dat

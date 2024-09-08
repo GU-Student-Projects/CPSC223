@@ -1,6 +1,4 @@
-#include <iostream>
-#include <cassert>
-#include "../header.hpp"
+#include "unit_test.hpp"
 
 void testAppend() {
     StreetLinkedList list("Sharp");
@@ -14,6 +12,7 @@ void testAppend() {
     assert(list.findSize() == 2);
     assert(list.head->approachingStreet == "Cincinnati");
     assert(list.tail->leavingStreet == "Standard");
+    std::cout << "testAppend passed successfully!" << std::endl;
 }
 
 
@@ -31,6 +30,7 @@ void testInsertNode() {
     assert(list.findSize() == 3);
     assert(list.head->next->approachingStreet == "Standard");
     assert(list.head->next->next->approachingStreet == "Dakota");
+    std::cout << "testInsertNode passed successfully!" << std::endl;
 }
 
 
@@ -52,6 +52,7 @@ void testDeleteNode() {
     assert(list.findSize() == 0);
     assert(list.head == nullptr);
     assert(list.tail == nullptr);
+    std::cout << "testDeleteNode passed successfully!" << std::endl;
 }
 
 void testSearchNode() {
@@ -69,6 +70,7 @@ void testSearchNode() {
 
     result = list.searchNode("Non-existent", "Street");
     assert(result == nullptr);
+    std::cout << "testSearchNode passed successfully!" << std::endl;
 }
 
 
@@ -82,6 +84,7 @@ void testPrintList() {
     list.append(node2);
 
     list.printList();
+    std::cout << "testPrintList passed successfully!" << std::endl;
 }
 
 
@@ -102,6 +105,7 @@ void testCopyConstructor() {
 
     assert(list2.head != list1.head);
     assert(list2.tail != list1.tail);
+    std::cout << "testCopyConstructor passed successfully!" << std::endl;
 }
 
 
@@ -122,18 +126,8 @@ void testCopyAssignmentOperator() {
     assert(list2.tail->leavingStreet == "Standard");
     assert(list2.head != list1.head);
     assert(list2.tail != list1.tail);
+    std::cout << "testCopyAssignmentOperator passed successfully!" << std::endl;
 }
 
 
-int main() {
-    testAppend();
-    testInsertNode();
-    testDeleteNode();
-    testSearchNode();
-    testPrintList();
-    testCopyConstructor();
-    testCopyAssignmentOperator();
 
-    std::cout << "All tests passed successfully!" << std::endl;
-    return 0;
-}
