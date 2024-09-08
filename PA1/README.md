@@ -19,7 +19,7 @@ The tree data collection application, is a simple to use program for both collec
 
 ### Design
 
-During the initial stages of this project, brainstorming revealed that the most efficiant way to achieve to goal of tracking shade trees, would be to work backwards from the stretch goals to the projects required deliverables. 
+During the initial stages of this project, brainstorming revealed that the most efficiant way to achieve to goal of tracking shade trees, would be to work backwards from the stretch goals to the projects required deliverables.
 
 #### Doubly Linked List
 
@@ -39,4 +39,4 @@ Due to the creation of the input mode first, the exploration mode was found to b
 
 ### Summary
 
-This high level design documention serves as a general overivew to the structure of this application and reasoning behind choices made during development. For an indepth analysis of each feature and their supporting functions, please review the **Specifications Document.** An example DAT file will be provied in results for a demonstration.
+This high level design documention serves as a general overivew to the structure of this application and reasoning behind choices made during development. For an indepth analysis of each feature and their supporting functions, please review the **Specifications Document.** An example DAT file will be provied in results for a demonstration. **results/logan_tree_data.dat**

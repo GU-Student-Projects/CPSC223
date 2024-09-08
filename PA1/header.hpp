@@ -1,5 +1,5 @@
 /*
-Name: Gabe DiMartino
+Name: Group 12
 Class: CPSC223, Fall 2024
 Date: August 27, 2024
 Programming Assignment: Project 1
