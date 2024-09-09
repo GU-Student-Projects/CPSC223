@@ -23,6 +23,8 @@ int main() {
         importVectorOfLinkedLists(streetData, fileName);
         explorationMode(streetData);
 
+        clearScreen();
+        main();
 		return 0;
         }
 	else if (3 == choice) { return 0;}

@@ -40,3 +40,13 @@ Due to the creation of the input mode first, the exploration mode was found to b
 ### Summary
 
 This high level design documention serves as a general overivew to the structure of this application and reasoning behind choices made during development. For an indepth analysis of each feature and their supporting functions, please review the **Specifications Document.** An example DAT file will be provied in results for a demonstration. **results/logan_tree_data.dat**
+
+### How To Run
+
+To run the application, simply run ``Make``. This will provide the user with a menu to select input mode or output mode.
+
+To run the unit tests, simply run ``Make test`` and the program will go through each of the unit tests in the **Tests/** directory.
+
+### **Use of AI**
+
+As a tool for development, AI was utilized throughout the application process to development time. Both the doubly linked list implementation and utilites packages were devoid of AI influence, other sections such as the exploration mode and and import/export did use AI. Specifically the functions would be prototyped and later optimized by generative AI to fix glaring bugs, add edge case  error handling, and simplify the overall code. It was also instrumental in the initial design of the application, ensuring packages worked together and overall logic was sound.
