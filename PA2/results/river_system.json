@@ -1,0 +1,770 @@
+{
+    "name": "Columbia River",
+    "type": "river",
+    "length": 2000.0,
+    "basinSize": 670000.0,
+    "averageDischarge": 6650.0,
+    "dams": [
+        {
+            "capacity": 2805.0,
+            "name": "Mica Dam",
+            "yearBuilt": 1973
+        },
+        {
+            "capacity": 2480.0,
+            "name": "Revelstoke Dam",
+            "yearBuilt": 1984
+        },
+        {
+            "capacity": 185.0,
+            "name": "Keenleyside Dam",
+            "yearBuilt": 1968
+        },
+        {
+            "capacity": 6809.0,
+            "name": "Grand Coulee Dam",
+            "yearBuilt": 1941
+        },
+        {
+            "capacity": 2620.0,
+            "name": "Chief Joseph Dam",
+            "yearBuilt": 1955
+        },
+        {
+            "capacity": 840.0,
+            "name": "Wells Dam",
+            "yearBuilt": 1967
+        },
+        {
+            "capacity": 1287.0,
+            "name": "Rocky Reach Dam",
+            "yearBuilt": 1961
+        },
+        {
+            "capacity": 660.0,
+            "name": "Rock Island Dam",
+            "yearBuilt": 1933
+        },
+        {
+            "capacity": 1092.0,
+            "name": "Wanapum Dam",
+            "yearBuilt": 1963
+        },
+        {
+            "capacity": 955.6,
+            "name": "Priest Rapids Dam",
+            "yearBuilt": 1961
+        },
+        {
+            "capacity": 1133.0,
+            "name": "McNary Dam",
+            "yearBuilt": 1954
+        },
+        {
+            "capacity": 2485.0,
+            "name": "John Day Dam",
+            "yearBuilt": 1971
+        },
+        {
+            "capacity": 2038.0,
+            "name": "The Dalles Dam",
+            "yearBuilt": 1957
+        },
+        {
+            "capacity": 1190.0,
+            "name": "Bonneville Dam",
+            "yearBuilt": 1937
+        }
+    ],
+    "left": {
+        "name": "Youngs",
+        "type": "river",
+        "length": 43.0,
+        "basinSize": 257.6,
+        "averageDischarge": 14.7,
+        "dams": [],
+        "left": null,
+        "right": null
+    },
+    "right": {
+        "name": "Columbia River",
+        "type": "river",
+        "length": 2000.0,
+        "basinSize": 670000.0,
+        "averageDischarge": 6650.0,
+        "dams": [
+        {
+            "capacity": 2805.0,
+            "name": "Mica Dam",
+            "yearBuilt": 1973
+        },
+        {
+            "capacity": 2480.0,
+            "name": "Revelstoke Dam",
+            "yearBuilt": 1984
+        },
+        {
+            "capacity": 185.0,
+            "name": "Keenleyside Dam",
+            "yearBuilt": 1968
+        },
+        {
+            "capacity": 6809.0,
+            "name": "Grand Coulee Dam",
+            "yearBuilt": 1941
+        },
+        {
+            "capacity": 2620.0,
+            "name": "Chief Joseph Dam",
+            "yearBuilt": 1955
+        },
+        {
+            "capacity": 840.0,
+            "name": "Wells Dam",
+            "yearBuilt": 1967
+        },
+        {
+            "capacity": 1287.0,
+            "name": "Rocky Reach Dam",
+            "yearBuilt": 1961
+        },
+        {
+            "capacity": 660.0,
+            "name": "Rock Island Dam",
+            "yearBuilt": 1933
+        },
+        {
+            "capacity": 1092.0,
+            "name": "Wanapum Dam",
+            "yearBuilt": 1963
+        },
+        {
+            "capacity": 955.6,
+            "name": "Priest Rapids Dam",
+            "yearBuilt": 1961
+        },
+        {
+            "capacity": 1133.0,
+            "name": "McNary Dam",
+            "yearBuilt": 1954
+        },
+        {
+            "capacity": 2485.0,
+            "name": "John Day Dam",
+            "yearBuilt": 1971
+        },
+        {
+            "capacity": 2038.0,
+            "name": "The Dalles Dam",
+            "yearBuilt": 1957
+        },
+        {
+            "capacity": 1190.0,
+            "name": "Bonneville Dam",
+            "yearBuilt": 1937
+        }
+    ],
+        "left": {
+            "name": "Sandy",
+            "type": "river",
+            "length": 92.0,
+            "basinSize": 1316.0,
+            "averageDischarge": 65.0,
+            "dams": [],
+            "left": null,
+            "right": null
+        },
+        "right": {
+            "name": "Columbia River",
+            "type": "river",
+            "length": 2000.0,
+            "basinSize": 670000.0,
+            "averageDischarge": 6650.0,
+            "dams": [],
+            "left": {
+                "name": "Columbia River",
+                "type": "river",
+                "length": 2000.0,
+                "basinSize": 670000.0,
+                "averageDischarge": 6650.0,
+                "dams": [],
+                "left": {
+                    "name": "Columbia River",
+                    "type": "river",
+                    "length": 2000.0,
+                    "basinSize": 670000.0,
+                    "averageDischarge": 6650.0,
+                    "dams": [],
+                    "left": {
+                        "name": "Willow Creek",
+                        "type": "stream",
+                        "length": 127.0,
+                        "basinSize": 2300.0,
+                        "averageDischarge": 0.9,
+                        "dams": [
+                            {
+                                "capacity": 0.0,
+                                "name": "Rire Dam",
+                                "yearBuilt": 1977
+                            }
+                        ],
+                        "left": null,
+                        "right": null
+                    },
+                    "right": {
+                        "name": "Columbia River",
+                        "type": "river",
+                        "length": 2000.0,
+                        "basinSize": 670000.0,
+                        "averageDischarge": 6650.0,
+                        "dams": [],
+                        "left": {
+                            "name": "Walla Walla",
+                            "type": "river",
+                            "length": 98.0,
+                            "basinSize": 4553.0,
+                            "averageDischarge": 34.3,
+                            "dams": [],
+                            "left": null,
+                            "right": null
+                        },
+                        "right": {
+                            "name": "Columbia River",
+                            "type": "river",
+                            "length": 2000.0,
+                            "basinSize": 670000.0,
+                            "averageDischarge": 6650.0,
+                            "dams": [],
+                            "left": {
+                                "name": "Snake",
+                                "type": "river",
+                                "length": 1735.0,
+                                "basinSize": 260938.7,
+                                "averageDischarge": 1755.6,
+                                "dams": [
+                                        {
+                                            "capacity": 2805.0,
+                                            "yearBuilt": 1911,
+                                            "name": "Jackson Lake Dam"
+                                        },
+                                        {
+                                            "capacity": 176.6,
+                                            "yearBuilt": 1957,
+                                            "name": "Palisades Dam"
+                                        },
+                                        {
+                                            "capacity": 22.6,
+                                            "yearBuilt": 1982,
+                                            "name": "Gem State Dam"
+                                        },
+                                        {
+                                            "capacity": 112.4,
+                                            "yearBuilt": 1927,
+                                            "name": "American Falls Dam"
+                                        },
+                                        {
+                                            "capacity": 28.5,
+                                            "yearBuilt": 1909,
+                                            "name": "Minidoka Dam"
+                                        },
+                                        {
+                                            "capacity": 59.5,
+                                            "yearBuilt": 1905,
+                                            "name": "Milner Dam"
+                                        },
+                                        {
+                                            "capacity": 52.9,
+                                            "yearBuilt": 1935,
+                                            "name": "Twin Falls Dam"
+                                        },
+                                        {
+                                            "capacity": 64.0,
+                                            "yearBuilt": 1907,
+                                            "name": "Shoshone Falls Dam"
+                                        },
+                                        {
+                                            "capacity": 34.5,
+                                            "yearBuilt": 1937,
+                                            "name": "Upper Salmon Falls Dam"
+                                        },
+                                        {
+                                            "capacity": 60.0,
+                                            "yearBuilt": 1910,
+                                            "name": "Lower Salmon Falls Dam"
+                                        },
+                                        {
+                                            "capacity": 75.0,
+                                            "yearBuilt": 1950,
+                                            "name": "Bliss Dam"
+                                        },
+                                        {
+                                            "capacity": 82.8,
+                                            "yearBuilt": 1952,
+                                            "name": "C. J. Strike Dam"
+                                        },
+                                        {
+                                            "capacity": 25.0,
+                                            "yearBuilt": 1901,
+                                            "name": "Swan Falls Dam"
+                                        },
+                                        {
+                                            "capacity": 585.0,
+                                            "yearBuilt": 1959,
+                                            "name": "Brownlee Dam"
+                                        },
+                                        {
+                                            "capacity": 220.0,
+                                            "yearBuilt": 1961,
+                                            "name": "Oxbow Dam"
+                                        },
+                                        {
+                                            "capacity": 450.0,
+                                            "yearBuilt": 1967,
+                                            "name": "Hells Canyon Dam"
+                                        },
+                                        {
+                                            "capacity": 932.0,
+                                            "yearBuilt": 1975,
+                                            "name": "Lower Granite Dam"
+                                        },
+                                        {
+                                            "capacity": 932.0,
+                                            "yearBuilt": 1970,
+                                            "name": "Little Goose Dam"
+                                        },
+                                        {
+                                            "capacity": 930.0,
+                                            "yearBuilt": 1969,
+                                            "name": "Lower Monumental Dam"
+                                        }
+                                    ],
+                                "left": null,
+                                "right": null
+                            },
+                            "right": {
+                                "name": "Columbia River",
+                                "type": "river",
+                                "length": 2000.0,
+                                "basinSize": 670000.0,
+                                "averageDischarge": 6650.0,
+                                "dams": [],
+                                "left": {
+                                    "name": "Columbia River",
+                                    "type": "river",
+                                    "length": 2000.0,
+                                    "basinSize": 670000.0,
+                                    "averageDischarge": 6650.0,
+                                    "dams": [],
+                                    "left": {
+                                        "name": "Columbia River",
+                                        "type": "river",
+                                        "length": 2000.0,
+                                        "basinSize": 670000.0,
+                                        "averageDischarge": 6650.0,
+                                        "dams": [],
+                                        "left": {
+                                            "name": "Columbia River",
+                                            "type": "river",
+                                            "length": 2000.0,
+                                            "basinSize": 670000.0,
+                                            "averageDischarge": 6650.0,
+                                            "dams": [],
+                                            "left": {
+                                                "name": "Columbia River",
+                                                "type": "river",
+                                                "length": 2000.0,
+                                                "basinSize": 670000.0,
+                                                "averageDischarge": 6650.0,
+                                                "dams": [],
+                                                "left": {
+                                                    "name": "Spokane",
+                                                    "type": "river",
+                                                    "length": 179.0,
+                                                    "basinSize": 17353.4,
+                                                    "averageDischarge": 228.6,
+                                                    "dams": [
+                                                        {
+                                                            "capacity": 15.0,
+                                                            "yearBuilt": 1908,
+                                                            "name": "Post Falls Dam"
+                                                        },
+                                                        {
+                                                            "capacity": 17.7,
+                                                            "yearBuilt": 1894,
+                                                            "name": "Upriver Dam"
+                                                        },
+                                                        {
+                                                            "capacity": 10.0,
+                                                            "yearBuilt": 1922,
+                                                            "name": "Upper Falls Dam"
+                                                        },
+                                                        {
+                                                            "capacity": 15.0,
+                                                            "yearBuilt": 1890,
+                                                            "name": "Monroe Street Dam"
+                                                        },
+                                                        {
+                                                            "capacity": 26.0,
+                                                            "yearBuilt": 1908,
+                                                            "name": "Nine Mile Dam"
+                                                        },
+                                                        {
+                                                            "capacity": 71.0,
+                                                            "yearBuilt": 1915,
+                                                            "name": "Long Lake Dam"
+                                                        },
+                                                        {
+                                                            "capacity": 36.0,
+                                                            "yearBuilt": 1911,
+                                                            "name": "Little Falls Dam"
+                                                        }
+                                                    ],
+                                                    "left": null,
+                                                    "right": null
+                                                },
+                                                "right": {
+                                                    "name": "Columbia River",
+                                                    "type": "river",
+                                                    "length": 2000.0,
+                                                    "basinSize": 670000.0,
+                                                    "averageDischarge": 6650.0,
+                                                    "dams": [],
+                                                    "left": {
+                                                        "name": "Colville",
+                                                        "type": "river",
+                                                        "length": 97.0,
+                                                        "basinSize": 2646.8,
+                                                        "averageDischarge": 16.4,
+                                                        "dams": [],
+                                                        "left": null,
+                                                        "right": null
+                                                    },
+                                                    "right": {
+                                                        "name": "Columbia River",
+                                                        "type": "river",
+                                                        "length": 2000.0,
+                                                        "basinSize": 670000.0,
+                                                        "averageDischarge": 6650.0,
+                                                        "dams": [],
+                                                        "left": {
+                                                            "name": "Columbia River",
+                                                            "type": "river",
+                                                            "length": 2000.0,
+                                                            "basinSize": 670000.0,
+                                                            "averageDischarge": 6650.0,
+                                                            "dams": [],
+                                                            "left": {
+                                                                "name": "Pend Oreille",
+                                                                "type": "river",
+                                                                "length": 771.0,
+                                                                "basinSize": 67055.5,
+                                                                "averageDischarge": 850.2,
+                                                                "dams": [
+                                                                    {
+                                                                        "capacity": 94.0,
+                                                                        "yearBuilt": 1915,
+                                                                        "name": "Thompson Falls Dam"
+                                                                    },
+                                                                    {
+                                                                        "capacity": 527.0,
+                                                                        "yearBuilt": 1959,
+                                                                        "name": "Noxon Rapids Dam"
+                                                                    },
+                                                                    {
+                                                                        "capacity": 255.0,
+                                                                        "yearBuilt": 1952,
+                                                                        "name": "Cabinet Gorge Dam"
+                                                                    },
+                                                                    {
+                                                                        "capacity": 42.0,
+                                                                        "yearBuilt": 1955,
+                                                                        "name": "Albeni Falls Dam"
+                                                                    },
+                                                                    {
+                                                                        "capacity": 90.0,
+                                                                        "yearBuilt": 1956,
+                                                                        "name": "Box Canyon Dam"
+                                                                    },
+                                                                    {
+                                                                        "capacity": 1040.0,
+                                                                        "yearBuilt": 1967,
+                                                                        "name": "Boundary Dam"
+                                                                    },
+                                                                    {
+                                                                        "capacity": 848.0,
+                                                                        "yearBuilt": 1979,
+                                                                        "name": "Seven Mile Dam"
+                                                                    },
+                                                                    {
+                                                                        "capacity": 450.0,
+                                                                        "yearBuilt": 1954,
+                                                                        "name": "Waneta Dam"
+                                                                    },
+                                                                    {
+                                                                        "capacity": 335.0,
+                                                                        "yearBuilt": 2015,
+                                                                        "name": "Waneta Dam Expansion"
+                                                                    }
+                                                                ],
+                                                                "left": null,
+                                                                "right": null
+                                                            },
+                                                            "right": {
+                                                                "name": "Columbia River",
+                                                                "type": "river",
+                                                                "length": 2000.0,
+                                                                "basinSize": 670000.0,
+                                                                "averageDischarge": 6650.0,
+                                                                "dams": [],
+                                                                "left": {
+                                                                    "name": "Columbia River",
+                                                                    "type": "river",
+                                                                    "length": 2000.0,
+                                                                    "basinSize": 670000.0,
+                                                                    "averageDischarge": 6650.0,
+                                                                    "dams": [],
+                                                                    "left": {
+                                                                        "name": "Columbia River",
+                                                                        "type": "river",
+                                                                        "length": 2000.0,
+                                                                        "basinSize": 670000.0,
+                                                                        "averageDischarge": 6650.0,
+                                                                        "dams": [],
+                                                                        "left": {
+                                                                            "name": "Canyon Creek",
+                                                                            "type": "stream",
+                                                                            "length": 161.7,
+                                                                            "basinSize": 0,
+                                                                            "averageDischarge": 4.9,
+                                                                            "dams": [],
+                                                                            "left": null,
+                                                                            "right": null
+                                                                        },
+                                                                        "right": {
+                                                                            "name": "Columbia River",
+                                                                            "type": "river",
+                                                                            "length": 2000.0,
+                                                                            "basinSize": 670000.0,
+                                                                            "averageDischarge": 6650.0,
+                                                                            "dams": [],
+                                                                            "left": {
+                                                                                "name": "Spillimacheen",
+                                                                                "type": "river",
+                                                                                "length": 118.0,
+                                                                                "basinSize": 1456.2,
+                                                                                "averageDischarge": 38.0,
+                                                                                "dams": [
+                                                                                    {
+                                                                                        "capacity": 0,
+                                                                                        "yearBuilt": 1909,
+                                                                                        "name": "Tumwater Canyon Dam"
+                                                                                    }
+                                                                                ],
+                                                                                "left": null,
+                                                                                "right": null
+                                                                            },
+                                                                            "right": {
+                                                                                "name": "Columbia River",
+                                                                                "type": "river",
+                                                                                "length": 2000.0,
+                                                                                "basinSize": 670000.0,
+                                                                                "averageDischarge": 6650.0,
+                                                                                "dams": [],
+                                                                                "left": {
+                                                                                    "name": "Bugaboo Creek",
+                                                                                    "type": "stream",
+                                                                                    "length": 368.4,
+                                                                                    "basinSize": 0.0,
+                                                                                    "averageDischarge": 7.3,
+                                                                                    "dams": [],
+                                                                                    "left": null,
+                                                                                    "right": null
+                                                                                },
+                                                                                "right": {
+                                                                                    "name": "Columbia River",
+                                                                                    "type": "river",
+                                                                                    "length": 2000.0,
+                                                                                    "basinSize": 670000.0,
+                                                                                    "averageDischarge": 6650.0,
+                                                                                    "dams": [],
+                                                                                    "left": null,
+                                                                                    "right": null
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "right": {
+                                                                        "name": "Wood",
+                                                                        "type": "river",
+                                                                        "length": 841.7,
+                                                                        "basinSize": 0.0,
+                                                                        "averageDischarge": 18.1,
+                                                                        "dams": [
+                                                                            {
+                                                                                "capacity": 9.0,
+                                                                                "name": "Magic Dam",
+                                                                                "yearBuilt": 1910
+                                                                            },
+                                                                            {
+                                                                                "capacity": 3.0,
+                                                                                "name": "Little Wood River Dam",
+                                                                                "yearBuilt": 1962
+                                                                            },
+                                                                            {
+                                                                                "capacity": 0.0,
+                                                                                "name": "Fish Creek Dam",
+                                                                                "yearBuilt": 1923
+                                                                            }
+                                                                        ],
+                                                                        "left": null,
+                                                                        "right": null
+                                                                    }
+                                                                },
+                                                                "right": {
+                                                                    "name": "Canoe",
+                                                                    "type": "river",
+                                                                    "length": 712.6,
+                                                                    "basinSize": 0.0,
+                                                                    "averageDischarge": 15.2,
+                                                                    "dams": [],
+                                                                    "left": null,
+                                                                    "right": null
+                                                                }
+                                                            }
+                                                        },
+                                                        "right": {
+                                                            "name": "Kettle",
+                                                            "type": "river",
+                                                            "length": 282.0,
+                                                            "basinSize": 10877.0,
+                                                            "averageDischarge": 82.3,
+                                                            "dams": [],
+                                                            "left": null,
+                                                            "right": null
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "right": {
+                                                "name": "Chelan",
+                                                "type": "lake",
+                                                "length": 6.6,
+                                                "basinSize": 2390.0,
+                                                "averageDischarge": 57.8,
+                                                "dams": [
+                                                    {
+                                                    "capacity": 59.2,
+                                                    "yearBuilt": 1927,
+                                                    "name": "Lake Chelan Dam"
+                                                }],
+                                                "left": null,
+                                                "right": null
+                                            }
+                                        },
+                                        "right": {
+                                            "name": "Entiat",
+                                            "type": "river",
+                                            "length": 92.0,
+                                            "basinSize": 1210.0,
+                                            "averageDischarge": 20.2,
+                                            "dams": [],
+                                            "left": null,
+                                            "right": null
+                                        }
+                                    },
+                                    "right": {
+                                        "name": "Wenatchee",
+                                        "type": "river",
+                                        "length": 85.0,
+                                        "basinSize": 3473.1,
+                                        "averageDischarge": 103.7,
+                                        "dams": [],
+                                        "left": null,
+                                        "right": null
+                                    }
+                                },
+                                "right": {
+                                    "name": "Yakima",
+                                    "type": "river",
+                                    "length": 344.0,
+                                    "basinSize": 15930.4,
+                                    "averageDischarge": 100.3,
+                                    "dams": [
+                                        {
+                                            "capacity": 0.0,
+                                            "yearBuilt": 1917,
+                                            "name": "Keechelus Dam"
+                                        },
+                                        {
+                                            "capacity": 0.0,
+                                            "yearBuilt": 1929,
+                                            "name": "Easton Diversion Dam"
+                                        },
+                                        {
+                                            "capacity": 12.0,
+                                            "yearBuilt": 1939,
+                                            "name": "Roza Diversion Dam"
+                                        },
+                                        {
+                                            "capacity": 0.0,
+                                            "yearBuilt": 2000,
+                                            "name": "Wapato Dam"
+                                        },
+                                        {
+                                            "capacity": 0.0,
+                                            "yearBuilt": 1907,
+                                            "name": "Sunnyside Dam"
+                                        },
+                                        {
+                                            "capacity": 0.0,
+                                            "yearBuilt": 1904,
+                                            "name": "Prosser Dam"
+                                        },
+                                        {
+                                            "capacity": 0.0,
+                                            "yearBuilt": 1892,
+                                            "name": "Wannawish Dam"
+                                        }
+                                    ],
+                                    "left": null,
+                                    "right": null
+                                }
+                            }
+                        }
+                    }
+                },
+                "right": {
+                    "name": "Little White Salmon",
+                    "type": "river",
+                    "length": 71.3,
+                    "basinSize": 1000.0,
+                    "averageDischarge": 30.4,
+                    "dams": [
+                        {
+                            "capacity": 0.0,
+                            "name": "Goose Lake Dam",
+                            "yearBuilt": 1924
+                        },
+                        {
+                            "capacity": 0.0,
+                            "name": "Brundage Dam",
+                            "yearBuilt": 1989
+                        }
+                    ],
+                    "left": null,
+                    "right": null
+                }
+            },
+            "right": {
+                "name": "Wind",
+                "type": "river",
+                "length": 48.0,
+                "basinSize": 580.0,
+                "averageDischarge": 34.2,
+                "dams": [],
+                "left": null,
+                "right": null
+            }
+        }
+    }
+}

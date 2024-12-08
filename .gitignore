@@ -35,3 +35,7 @@
 outputExecutable
 testExecutable
 test_export.dat
+
+ignore/
+PA2-Personal/
+watershed
