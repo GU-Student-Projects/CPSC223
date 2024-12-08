@@ -1,6 +1,7 @@
 // implementation.cpp
 #include "header.hpp"
 #include <fstream>
+#include <iostream>
 
 json Dam::to_json() const {
     return {
@@ -171,4 +172,61 @@ bool WatershedTree::saveToFile(const std::string& filename) const {
     
     file.close();
     return true;
+}
+
+void WatershedTree::addWaterBody() {
+    WaterBody* newBody = new WaterBody();
+    
+    std::cout << "Enter water body name: ";
+    std::getline(std::cin, newBody->name);
+    
+    std::cout << "Enter type (river/stream): ";
+    std::getline(std::cin, newBody->type);
+    
+    std::cout << "Enter length in kilometers: ";
+    std::cin >> newBody->length;
+    std::cin.ignore();
+
+    std::cout << "Enter basin size in square kilometers (0 if unknown): ";
+    std::cin >> newBody->basinSize;
+    std::cin.ignore();
+
+    std::cout << "Enter average discharge in cubic meters per second (0 if unknown): ";
+    std::cin >> newBody->averageDischarge;
+    std::cin.ignore();
+    
+    if (!root) {
+        root = newBody;
+        return;
+    }
+    
+    WaterBody* current = root;
+    while (true) {
+        std::cout << "Add as left (1) or right (2) tributary of " << current->name << "? ";
+        int choice;
+        std::cin >> choice;
+        std::cin.ignore();
+        
+        if (choice == 1) {
+            if (!current->left) {
+                WaterBody* continuation = new WaterBody(*current);
+                current->left = newBody;
+                current->right = continuation;
+                newBody->parent = current;
+                continuation->parent = current;
+                break;
+            }
+            current = current->left;
+        } else {
+            if (!current->right) {
+                WaterBody* continuation = new WaterBody(*current);
+                current->right = newBody;
+                current->left = continuation;
+                newBody->parent = current;
+                continuation->parent = current;
+                break;
+            }
+            current = current->right;
+        }
+    }
 }

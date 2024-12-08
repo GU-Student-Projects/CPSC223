@@ -49,6 +49,7 @@ public:
     
     bool loadFromFile(const std::string& filename);
     bool saveToFile(const std::string& filename) const;
+    void addWaterBody();
 };
 
 #endif
