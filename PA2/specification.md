@@ -1,6 +1,6 @@
 # Specification Document
 
-The following contains in-depth information on specific features of the Watershed Management System.
+The following contains in depth information on specific features
 
 ## Data Structures
 
