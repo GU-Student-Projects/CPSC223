@@ -1,42 +1,55 @@
-# Compiler and flags
+# Directories for source files
+SRC_DIRS = .
+TEST_DIRS = ./tests
+
+# Find all .cpp files in the specified directories, but not in the root
+SRCS = $(wildcard $(foreach dir, $(SRC_DIRS), $(dir)/*.cpp))
+
+MAIN_SRC = $(filter %main.cpp, $(SRCS))
+OTHER_SRCS = $(filter-out %main.cpp, $(SRCS))
+TEST_SRCS = $(wildcard $(foreach dir, $(TEST_DIRS), $(dir)/*.cpp)) $(OTHER_SRCS)
+
+# Compiler flags
 CXX = g++
 CXXFLAGS = -g -Wall -std=c++11
+INCLUDES = -I. -I/usr/local/include
 
-# Check operating system for includes
+# Check if we need to link against a separate json library
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Darwin)
     # macOS specific
-    INCLUDES = -I. -I/usr/local/include
+    JSON_INCLUDES = -I/usr/local/include
 else
     # Linux specific
-    INCLUDES = -I. -I/usr/include
+    JSON_INCLUDES = -I/usr/include
 endif
 
-# Source files
-MAIN_SRCS = watershed.cpp main.cpp
-TEST_SRCS = watershed.cpp test/tests.cpp
+# Default target: build and run main.cpp
+all: main
 
-# Default target: build main program
-all: watershed
+main: $(SRCS)
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) $(JSON_INCLUDES) $(SRCS) -o outputExecutable
+	@./outputExecutable
+	@rm ./outputExecutable
 
-# Build main program
-watershed: $(MAIN_SRCS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(MAIN_SRCS) -o watershed
-
-# Build and run tests
+# Target for building and running tests
 test: $(TEST_SRCS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(TEST_SRCS) -o test_watershed
-	./test_watershed
-	@rm test_watershed
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) $(JSON_INCLUDES) $(TEST_SRCS) -o testExecutable
+	@./testExecutable
+	@rm ./testExecutable
 
-# Clean target
+# Debug target for running gdb and memory analysis
+debug: $(SRCS)
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) $(JSON_INCLUDES) $(SRCS) -o outputExecutable
+	@echo "Running gdb for debugging..."
+	@valgrind --vgdb=yes --vgdb-error=0 ./outputExecutable
+	@gdb -q ./outputExecutable
+
+# Clean target to remove generated files
 clean:
-	rm -f watershed test_watershed
+	@rm -f outputExecutable testExecutable
 
-# Run both main build and tests
-check: all test
-
-# Help target for installation instructions
+# Help target to show installation instructions
 help:
 	@echo "Before building, ensure nlohmann/json is installed:"
 	@echo ""
@@ -50,5 +63,3 @@ help:
 	@echo "    wget https://github.com/nlohmann/json/releases/download/v3.11.3/json.hpp"
 	@echo "    sudo mkdir -p /usr/local/include/nlohmann"
 	@echo "    sudo mv json.hpp /usr/local/include/nlohmann/"
-
-.PHONY: all test clean check help

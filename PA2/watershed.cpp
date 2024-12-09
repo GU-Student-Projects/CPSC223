@@ -1,4 +1,10 @@
-// implementation.cpp
+/*
+Name: Group 12
+Class: CPSC223, Fall 2024
+Date: December 7, 2024
+Programming Assignment: Project 2
+Description: Implementation for watershed
+*/
 #include "header.hpp"
 #include <fstream>
 #include <iostream>
@@ -39,6 +45,29 @@ WaterBody::WaterBody(const WaterBody& other) :
     parent(nullptr) {}
 
 WaterBody::~WaterBody() {}
+
+void WaterBody::displayInfo() const {
+    std::cout << "\nWater Body Information:\n";
+    std::cout << "Name: " << name << "\n";
+    std::cout << "Type: " << type << "\n";
+    if (length > 0) std::cout << "Length: " << length << " km\n";
+    if (basinSize > 0) std::cout << "Basin Size: " << basinSize << " km²\n";
+    if (averageDischarge > 0) std::cout << "Average Discharge: " << averageDischarge << " m³/s\n";
+    std::cout << "Number of dams: " << dams.size() << "\n";
+    
+    if (!dams.empty()) {
+        std::cout << "\nDams:\n";
+        for (const auto& dam : dams) {
+            std::cout << "- " << dam.name << " (Built: " << dam.yearBuilt 
+                     << ", Capacity: " << dam.capacity << " MW)\n";
+        }
+    }
+    
+    std::cout << "\nConnections:\n";
+    if (parent) std::cout << "Parent: " << parent->name << "\n";
+    if (left) std::cout << "Left tributary: " << left->name << "\n";
+    if (right) std::cout << "Right tributary: " << right->name << "\n";
+}
 
 json WaterBody::to_json() const {
     json j = {
@@ -111,6 +140,35 @@ WatershedTree::WatershedTree() : root(nullptr) {}
 
 WatershedTree::~WatershedTree() {
     deleteTree(root);
+}
+
+void WatershedTree::displayTreeRecursive(WaterBody* node, std::string prefix, bool isLeft) {
+    if (!node) return;
+    
+    std::cout << prefix;
+    std::cout << (isLeft ? "├── " : "└── ");
+    
+    std::cout << node->name;
+    if (node->type != "river") std::cout << " (" << node->type << ")";
+    if (node->length > 0) std::cout << " [" << node->length << " km]";
+    std::cout << "\n";
+    
+    if (node->left) {
+        displayTreeRecursive(node->left, prefix + (isLeft ? "│   " : "    "), true);
+    }
+    if (node->right) {
+        displayTreeRecursive(node->right, prefix + (isLeft ? "│   " : "    "), false);
+    }
+}
+
+void WatershedTree::displayTree() {
+    if (!root) {
+        std::cout << "Tree is empty!\n";
+        return;
+    }
+    
+    std::cout << "\nWatershed Structure:\n\n";
+    displayTreeRecursive(root, "", false);
 }
 
 void WatershedTree::deleteTree(WaterBody* node) {
@@ -229,4 +287,59 @@ void WatershedTree::addWaterBody() {
             current = current->right;
         }
     }
+}
+
+void WatershedTree::navigate() {
+    if (!root) {
+        std::cout << "Tree is empty!\n";
+        return;
+    }
+    
+    currentNode = root;
+    
+    char choice;
+    do {
+        currentNode->displayInfo();
+        
+        std::cout << "\nNavigation Options:\n";
+        std::cout << "1. Go left tributary\n";
+        std::cout << "2. Go right tributary\n";
+        std::cout << "3. Go to parent\n";
+        std::cout << "4. Exit\n";
+        std::cout << "Enter choice: ";
+        std::cin >> choice;
+        std::cin.ignore();
+        
+        switch (choice) {
+            case '1':
+                if (currentNode->left) {
+                    currentNode = currentNode->left;
+                    std::cout << "Moved to left tributary: " << currentNode->name << std::endl;
+                }
+                else
+                    std::cout << "No left tributary available!\n";
+                break;
+            case '2':
+                if (currentNode->right) {
+                    currentNode = currentNode->right;
+                    std::cout << "Moved to right tributary: " << currentNode->name << std::endl;
+                }
+                else
+                    std::cout << "No right tributary available!\n";
+                break;
+            case '3':
+                if (currentNode->parent) {
+                    currentNode = currentNode->parent;
+                    std::cout << "Moved to parent: " << currentNode->name << std::endl;
+                }
+                else
+                    std::cout << "No parent available (you are at the root).\n";
+                break;
+            case '4':
+                std::cout << "Exiting mode.\n";
+                break;
+            default:
+                std::cout << "Invalid choice! Please try again.\n";
+        }
+    } while (choice != '4');
 }

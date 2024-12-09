@@ -32,7 +32,8 @@ public:
     WaterBody();
     WaterBody(const WaterBody& other);
     ~WaterBody();
-    
+
+    void displayInfo() const;
     json to_json() const;
     void from_json(const json& j);
     void setParentPointers(WaterBody* parentNode);
@@ -41,12 +42,17 @@ public:
 class WatershedTree {
 private:
     WaterBody* root;
+    WaterBody* currentNode;
+
     void deleteTree(WaterBody* node);
+    void displayTreeRecursive(WaterBody* node, std::string prefix, bool isLeft);
     
 public:
     WatershedTree();
     ~WatershedTree();
     
+    void navigate();
+    void displayTree();
     bool loadFromFile(const std::string& filename);
     bool saveToFile(const std::string& filename) const;
     void addWaterBody();
