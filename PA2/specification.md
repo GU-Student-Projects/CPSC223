@@ -130,3 +130,84 @@ To construct watershed data to and from JSON files.
 * **Failed Load**: Error message, tree remains unchanged
 * **Successful Save**: Data written to file
 * **Failed Save**: Error message, file unchanged
+
+# Implementations
+
+## 1. Dam Class Methods
+
+### 1.1 `Dam::to_json() const`
+- **Description:** Serializes the `Dam` object into a JSON format.
+- **Parameters:** None.
+- **Returns:** A `json` object containing the dam's name, year built, and capacity.
+- **Exception Handling:** None.
+
+### 1.2 `Dam::from_json(const json& j)`
+- **Description:** Deserializes a JSON object into the `Dam` object.
+- **Parameters:** 
+  - `j`: A `json` object containing the dam details.
+- **Returns:** Void.
+- **Exception Handling:** May throw if JSON does not match expected schema.
+
+## 2. WaterBody Class Methods
+
+### 2.1 Constructors and Destructor
+- **`WaterBody()`**
+  - Initializes a new `WaterBody` with default values.
+- **`WaterBody(const WaterBody& other)`**
+  - Copy constructor, initializes a new `WaterBody` from another instance.
+- **`~WaterBody()`**
+  - Destructor, cleans up dynamic allocations within `WaterBody`.
+
+### 2.2 `WaterBody::to_json() const`
+- **Description:** Serializes the `WaterBody` object along with its associated `Dam` objects into JSON format.
+- **Parameters:** None.
+- **Returns:** A `json` object representing the water body and its properties.
+- **Exception Handling:** None.
+
+### 2.3 `WaterBody::from_json(const json& j)`
+- **Description:** Deserializes a JSON object into the `WaterBody` object, including nested structures like dams and child water bodies.
+- **Parameters:** 
+  - `j`: A `json` object containing the water body details.
+- **Returns:** Void.
+- **Exception Handling:** May throw if JSON does not match expected schema or if recursive deserialization fails.
+
+### 2.4 `WaterBody::setParentPointers(WaterBody* parentNode)`
+- **Description:** Sets the parent pointers recursively for a hierarchical water body structure.
+- **Parameters:** 
+  - `parentNode`: The parent `WaterBody` object.
+- **Returns:** Void.
+- **Exception Handling:** None.
+
+## 3. WatershedTree Class Methods
+
+### 3.1 `WatershedTree()` and `~WatershedTree()`
+- **Constructor and Destructor:**
+  - Initializes a new `WatershedTree` with an empty root.
+  - Destructor cleans up all associated `WaterBody` objects.
+
+### 3.2 `WatershedTree::deleteTree(WaterBody* node)`
+- **Description:** Recursively deletes all nodes in the tree, starting from the given node.
+- **Parameters:** 
+  - `node`: The root node of the subtree to delete.
+- **Returns:** Void.
+- **Exception Handling:** None.
+
+### 3.3 `WatershedTree::loadFromFile(const std::string& filename)`
+- **Description:** Loads a watershed structure from a JSON file.
+- **Parameters:** 
+  - `filename`: The path to the JSON file.
+- **Returns:** `true` if loading is successful, `false` otherwise.
+- **Exception Handling:** Catches and handles file and JSON parsing exceptions.
+
+### 3.4 `WatershedTree::saveToFile(const std::string& filename) const`
+- **Description:** Saves the current watershed structure into a JSON file.
+- **Parameters:** 
+  - `filename`: The path to the JSON file.
+- **Returns:** `true` if saving is successful, `false` otherwise.
+- **Exception Handling:** Handles file opening exceptions.
+
+### 3.5 `WatershedTree::addWaterBody()`
+- **Description:** Interactively adds a new `WaterBody` to the watershed, with user input defining its properties and position within the tree.
+- **Parameters:** None.
+- **Returns:** Void.
+- **Exception Handling:** Handles input exceptions and ensures consistent tree structure.
